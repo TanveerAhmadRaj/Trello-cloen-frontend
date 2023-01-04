@@ -49,7 +49,7 @@ export default {
 
   methods: {
     async login() {
-      const response = await axios.post("login", {
+      const response = await axios.post("https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/login", {
         email: this.email,
         password: this.password,
       });
