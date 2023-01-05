@@ -46,7 +46,8 @@ export default {
     };
   },
   async mounted() {
-    const result = await axios.get(`${this.$route.params.id}`);
+    let id = this.$route.params.id
+    const result = await axios.get(`https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/${id}`);
     this.todo = result.data;
   },
 
