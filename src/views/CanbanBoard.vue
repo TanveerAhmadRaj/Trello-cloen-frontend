@@ -102,7 +102,7 @@ export default {
     async onChange(e) {
       for (let i = 0; i < this.start.length; i++) {
         console.log(e);
-        let id = this.start[i].index;
+        let id = this.start[i].id;
         const res = await axios.put(`https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/${id}`, {
           title: this.start[i].title,
           description: this.start[i].description,
