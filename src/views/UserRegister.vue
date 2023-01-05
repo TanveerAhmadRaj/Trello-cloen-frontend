@@ -57,7 +57,7 @@ export default {
   },
   methods: {
     async register() {
-      const response = await axios.post("register", {
+      const response = await axios.post("https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/register", {
         name: this.name,
         email: this.email,
         password: this.password,

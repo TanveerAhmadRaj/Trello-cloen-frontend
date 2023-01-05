@@ -52,7 +52,7 @@ export default {
 
   methods: {
     async update() {
-      const response = await axios.put(`${this.$route.params.id}`, {
+      const response = await axios.put(`https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/${this.$route.params.id}`, {
         title: this.todo.title,
         description: this.todo.description,
         todoState: this.todo.todoState,

@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     async add() {
-      const response = await axios.post("add", {
+      const response = await axios.post("https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/add", {
         title: this.title,
         description: this.description,
         todoState: "start",

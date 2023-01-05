@@ -49,7 +49,9 @@ export default createStore({
     },
 
     async getTodos({ commit }) {
-      const response = await axios.get("getUserTodos");
+      const response = await axios.get(
+        "https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/getUserTodos"
+      );
       const start = [],
         inProgress = [],
         done = [];
@@ -68,7 +70,9 @@ export default createStore({
     },
     async del({ commit }, payload) {
       console.log(payload.id);
-      await axios.delete(`${payload.id}`);
+      await axios.delete(
+        `https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/${payload.id}`
+      );
       commit("DELETE", payload);
     },
   },
