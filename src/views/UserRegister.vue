@@ -13,7 +13,7 @@
                   type="text"
                   class="form-control"
                   v-model="name"
-                  placeholder="Enter Your name..." />
+                  placeholder="Enter Your name..." required />
               </div>
               <div class="form-group">
                 <label>Email:</label>
@@ -21,7 +21,7 @@
                   type="email"
                   class="form-control"
                   v-model="email"
-                  placeholder="Enter Your Email..." />
+                  placeholder="Enter Your Email..." required/>
               </div>
               <div class="form-group">
                 <label>Password:</label>
@@ -29,7 +29,7 @@
                   type="password"
                   class="form-control"
                   v-model="password"
-                  placeholder="Enter Your Password..." />
+                  placeholder="Enter Your Password..." required/>
               </div>
               <div class="form-group">
                 <button class="btn btn-dark form-control rounded" type="submit">
