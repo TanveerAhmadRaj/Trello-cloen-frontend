@@ -102,8 +102,8 @@ export default {
     async onChange(e) {
       for (let i = 0; i < this.start.length; i++) {
         console.log(e);
-        console.log(this.start[i].index);
-        const res = await axios.put(`https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/${this.start[i].id}`, {
+        let id = this.start[i].index;
+        const res = await axios.put(`https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/${id}`, {
           title: this.start[i].title,
           description: this.start[i].description,
           todoState: "start",
@@ -115,8 +115,8 @@ export default {
         }
       }
       for (let i = 0; i < this.inProgress.length; i++) {
-        console.log(i + " " + this.inProgress[i].title);
-        const res = await axios.put(`https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/${this.start[i].id}`, {
+        let id = this.inProgress[i].id
+        const res = await axios.put(`https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/${id}`, {
           title: this.inProgress[i].title,
           description: this.inProgress[i].description,
           todoState: "in progress",
@@ -128,7 +128,8 @@ export default {
         }
       }
       for (let i = 0; i < this.done.length; i++) {
-        const res = await axios.put(`https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/${this.start[i].id}`, {
+        let id = this.done[i].id
+        const res = await axios.put(`https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/${id}`, {
           title: this.done[i].title,
           description: this.done[i].description,
           todoState: "done",
