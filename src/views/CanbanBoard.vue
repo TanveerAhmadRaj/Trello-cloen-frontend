@@ -103,6 +103,7 @@ export default {
       for (let i = 0; i < this.start.length; i++) {
         console.log(e);
         let id = this.start[i].id;
+        console.log(id);
         const res = await axios.put(`https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/${id}`, {
           title: this.start[i].title,
           description: this.start[i].description,
@@ -116,6 +117,7 @@ export default {
       }
       for (let i = 0; i < this.inProgress.length; i++) {
         let id = this.inProgress[i].id
+        console.log(id);
         const res = await axios.put(`https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/${id}`, {
           title: this.inProgress[i].title,
           description: this.inProgress[i].description,
@@ -129,6 +131,7 @@ export default {
       }
       for (let i = 0; i < this.done.length; i++) {
         let id = this.done[i].id
+        console.log(id);
         const res = await axios.put(`https://app-dbd3cbd7-f92a-43ea-888c-15444348dd64.cleverapps.io/users/${id}`, {
           title: this.done[i].title,
           description: this.done[i].description,
